@@ -1,0 +1,366 @@
+:root {
+  --background-color: #121212;
+  --primary-color: #f5f5f5; /* Changed to off-white */
+  --secondary-color: #1a1a1a;
+  --accent-color: #b4202a; /* Keep red */
+  --date-color: rgb(238,195,94); /* New amber/gold color for dates */
+  --font-color: #f5f5f5; /* Changed to off-white */
+  --header-color: #f5f5f5; /* Changed to off-white */
+  --font-family-heading: 'Fira Code', monospace; /* Changed to Fira Code */
+  --font-family-body: 'Fira Code', monospace; /* Changed to Fira Code */
+  --border-radius: 0;
+  --form-element-active-border-color: var(--accent-color);
+  --form-element-focus-color: var(--primary-color);
+  --form-element-background-color: var(--secondary-color);
+  --button-hover-border-color: var(--accent-color);
+  --button-hover-background-color: var(--accent-color);
+  --button-primary-hover-background-color: var (--accent-color);
+  --button-primary-hover-border-color: var(--accent-color);
+}
+
+/* Terminal.css v0.7.2 */
+/* https://github.com/panr/terminal-css */
+
+/* Global variables. */
+:root {
+  /* Set sans-serif & mono fonts */
+  --sans-font: var(--font-family-body);
+  --mono-font: 'Fira Code', Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace; /* Changed to Fira Code */
+  --heading-font: var(--font-family-heading);
+  
+  /* Body font size. By default, effectively 18.4px */
+  --base-fontsize: 1.15rem;
+
+  /* Major third scale progression. By default, 1.25 */
+  --header-scale: 1.25;
+
+  /* Line height is set to the "Golden ratio" for optimal legibility */
+  --line-height: 1.618;
+
+  /* Default (light) theme */
+  --bg: var(--background-color);
+  --accent-bg: var(--secondary-color);
+  --text: var(--font-color);
+  --text-light: var(--date-color); /* Changed to amber/gold */
+  --border: #898EA4;
+  --accent: var(--accent-color);
+  --accent-hover: #ff676f;
+  --accent-text: var(--primary-color);
+  --code: #f06292;
+  --preformatted: #444;
+  --marked: #ffdd33;
+  --disabled: #efefef;
+}
+
+/* Reset box-sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Reset tap highlight color for iOS & Android */
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Set the default text color and background for the body */
+body {
+  margin: 0;
+  color: var(--text);
+  background-color: var(--bg);
+  font-family: var(--sans-font);
+  font-size: var(--base-fontsize);
+  line-height: var(--line-height);
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Make the main element a nice central block */
+main {
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  max-width: 45rem;
+  width: 100%;
+}
+
+/* Format headers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  line-height: 1.1;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  color: var(--header-color);
+}
+
+/* Set progressively decreasing header font sizes */
+h1 {
+  font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale) * var(--header-scale));
+}
+h2 {
+  font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale));
+}
+h3 {
+  font-size: calc(var(--base-fontsize) * var(--header-scale));
+}
+h4 {
+  font-size: var(--base-fontsize);
+}
+h5 {
+  font-size: calc(var(--base-fontsize) / var(--header-scale));
+}
+h6 {
+  font-size: calc(var(--base-fontsize) / var(--header-scale) / var(--header-scale));
+}
+
+/* Add a little spacing between header and text */
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p {
+  margin-top: 0.5em;
+}
+
+/* Format links */
+a, a:visited {
+  color: var(--accent-text);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-hover);
+  text-decoration: none;
+}
+
+/* Format navigation */
+nav {
+  margin: 1rem 0;
+  padding: 1rem 0;
+  background-color: var(--accent-bg);
+  border-radius: var(--border-radius);
+  text-align: center;
+  display: block;
+}
+
+nav a {
+  margin: 0 1rem;
+  color: var(--accent-text);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:active {
+  color: var(--accent-hover);
+}
+
+/* Reduce header margin in nav */
+nav h1, nav h2, nav h3 {
+  margin-top: 1em;
+}
+
+/* Format images and figures */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+}
+
+figure {
+  margin: 1em 0;
+}
+
+figcaption {
+  font-size: 0.9em;
+  color: var(--text-light);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Format code and preformatted text */
+code, pre, kbd, samp {
+  font-family: var(--mono-font);
+  font-size: 0.9em;
+  color: var(--code);
+  border-radius: var(--border-radius);
+}
+
+code {
+  padding: 0.1rem 0.2rem;
+}
+
+pre {
+  padding: 1rem 1.4rem;
+  max-width: 100%;
+  overflow: auto;
+  color: var(--preformatted);
+  background: var(--accent-bg);
+}
+
+/* Ensures the language badge is not colored */
+pre code {
+  color: var(--preformatted);
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fix embedded code within pre */
+pre code.language-* {
+  white-space: pre;
+  margin: 0;
+}
+
+/* Format blockquotes and asides */
+blockquote {
+  margin-inline-start: 2em;
+  margin-inline-end: 2em;
+  padding: 0.5rem 1rem;
+  border-inline-start: 0.25rem solid var(--accent);
+  color: var(--text-light);
+}
+
+/* Format tables */
+table {
+  border-collapse: collapse;
+  display: block;
+  margin: 1.5rem 0;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+td, th {
+  border: 1px solid var(--border);
+  text-align: left;
+  padding: 0.5rem;
+}
+
+th {
+  background-color: var(--accent-bg);
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: var(--accent-bg);
+}
+
+table caption {
+  caption-side: bottom;
+  font-size: 0.9em;
+  color: var(--text-light);
+  margin: 0.5rem 0;
+}
+
+/* Format form elements */
+textarea, select, input {
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  color: var(--text);
+  background-color: var(--form-element-background-color);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  box-shadow: none;
+  max-width: 100%;
+  display: inline-block;
+}
+
+textarea:not([cols]) {
+  width: 100%;
+}
+
+textarea:not([rows]) {
+  min-height: 8em;
+}
+
+select {
+  background-image: 
+    linear-gradient(45deg, transparent 49%, var(--text) 51%),
+    linear-gradient(135deg, var(--text) 51%, transparent 49%);
+  background-position: 
+    calc(100% - 20px),
+    calc(100% - 15px);
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+  padding-right: 2rem;
+}
+
+/* Add arrow to dropdown */
+select::-ms-expand {
+  display: none;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  vertical-align: middle;
+  position: relative;
+}
+
+input[type="submit"], input[type="button"], input[type="reset"], button {
+  padding: 0.5em 1em;
+  border: 1px solid var(--accent);
+  border-radius: var(--border-radius);
+  background-color: var(--accent);
+  font-size: 1rem;
+  color: var(--bg);
+  text-decoration: none;
+  line-height: normal;
+}
+
+input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover, button:hover {
+  border-color: var(--button-hover-border-color);
+  background-color: var(--button-hover-background-color);
+  cursor: pointer;
+}
+
+/* Format button element as link */
+button.link {
+  background: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  color: var(--accent);
+}
+
+button.link:hover {
+  text-decoration: underline;
+  color: var(--accent-hover);
+}
+
+/* Format details and summary */
+details {
+  margin: 1.5rem 0;
+  padding: 0.5rem 1rem;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Format helpers */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Custom layout for your CV styling */
+.cv-section { margin-bottom: 2em; }
+.cv-section h2 { border-bottom: 2px solid var(--primary-color); padding-bottom: 0.3em; margin-top: 1.5em; }
+.cv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.cv-position { margin-bottom: 1.5em; }
+.cv-position h3 { margin-bottom: 0.3em; }
+.cv-position .company { font-weight: bold; margin-bottom: 0.3em; }
+.cv-position .date { font-style: italic; color: rgb(238,195,94); margin-bottom: 0.5em; } /* Updated to RGB 238,195,94 */
+.cv-position .location { margin-bottom: 0.5em; }
+.cv-position p { line-height: 1.5; }
+.contact-item { display: flex; align-items: center; margin-bottom: 0.5em; }
+.contact-item i { margin-right: 10px; min-width: 20px; }
+.skill-tag { display: inline-block; background-color: var(--accent-bg); padding: 5px 10px; margin: 3px; border-radius: 3px; }
+.language-item { display: flex; justify-content: space-between; margin-bottom: 0.3em; }
+
+@media (max-width: 768px) {
+  .cv-grid { grid-template-columns: 1fr; }
+}
