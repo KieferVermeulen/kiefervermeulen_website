@@ -13,7 +13,29 @@
         nav a:hover { text-decoration: none; color: #b4202a; }
         .container { padding: 20px; max-width: 1200px; margin: 0 auto; }
         h1 { text-align: center; }
+        
+        /* CV Styling */
+        .cv-section { margin-bottom: 2em; }
+        .cv-section h2 { border-bottom: 2px solid #b9bffb; padding-bottom: 0.3em; margin-top: 1.5em; }
+        .cv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .cv-position { margin-bottom: 1.5em; }
+        .cv-position h3 { margin-bottom: 0.3em; }
+        .cv-position .company { font-weight: bold; margin-bottom: 0.3em; }
+        .cv-position .date { font-style: italic; color: #8a8fdd; margin-bottom: 0.5em; }
+        .cv-position .location { margin-bottom: 0.5em; }
+        .cv-position p { line-height: 1.5; }
+        .contact-item { display: flex; align-items: center; margin-bottom: 0.5em; }
+        .contact-item i { margin-right: 10px; min-width: 20px; }
+        .skill-tag { display: inline-block; background-color: #1a1a1a; padding: 5px 10px; margin: 3px; border-radius: 3px; }
+        .language-item { display: flex; justify-content: space-between; margin-bottom: 0.3em; }
+        
+        @media (max-width: 768px) {
+            .cv-grid { grid-template-columns: 1fr; }
+        }
     </style>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -26,7 +48,130 @@
         <a href="art.html">Art</a>
     </nav>
     <div class="container">
-        <p>This is the About page. Content to be added here.</p>
+        <div class="cv-section">
+            <h2>Summary</h2>
+            <p>From an early age I knew that physics was the field for me. After obtaining my bachelors in Applied physics at the Technical University of Delft, I continued on to my Masters. During my thesis at Qutech I researched the topological properties of Majorana devices. Now I work for Delft Circuits as head of research where I lead a team of engineers to shape the quantum wiring revolution. My fields of interest are quantum nanoscience, quantum computation, quantum physics, nano-fabrication and scientific computing.</p>
+        </div>
+
+        <div class="cv-grid">
+            <div>
+                <div class="cv-section">
+                    <h2>Contact</h2>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:kiefervermeulen@hotmail.com">kiefervermeulen@hotmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/kiefer-vermeulen-53039a86" target="_blank">LinkedIn Profile</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Delft, South Holland, Netherlands</span>
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <h2>Skills</h2>
+                    <div>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Microsoft Office</span>
+                        <span class="skill-tag">Leadership</span>
+                        <span class="skill-tag">Quantum Physics</span>
+                        <span class="skill-tag">Nano-fabrication</span>
+                        <span class="skill-tag">Scientific Computing</span>
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <h2>Languages</h2>
+                    <div class="language-item">
+                        <span>English</span>
+                        <span>Native or Bilingual</span>
+                    </div>
+                    <div class="language-item">
+                        <span>Dutch</span>
+                        <span>Native or Bilingual</span>
+                    </div>
+                    <div class="language-item">
+                        <span>Spanish</span>
+                        <span>Elementary</span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="cv-section">
+                    <h2>Experience</h2>
+                    
+                    <div class="cv-position">
+                        <h3>Research Team Lead</h3>
+                        <div class="company">Delft Circuits</div>
+                        <div class="date">November 2023 - Present (1 year 7 months)</div>
+                        <div class="location">Delft, South Holland, Netherlands</div>
+                    </div>
+                    
+                    <div class="cv-position">
+                        <h3>Quantum Engineer</h3>
+                        <div class="company">Delft Circuits</div>
+                        <div class="date">September 2018 - Present (6 years 9 months)</div>
+                        <div class="location">Delft Area, Netherlands</div>
+                        <p>At Delft Circuits I primarily focus on developing the fabrication process for Cri/oFlex cabling and overseeing production. Secondly, I work together with companies and research institutes to discuss tailor made cables that meet their requirements.</p>
+                    </div>
+                    
+                    <div class="cv-position">
+                        <h3>Intern fabrication analyst and process engineer</h3>
+                        <div class="company">Delft Circuits</div>
+                        <div class="date">June 2018 - September 2018 (4 months)</div>
+                        <div class="location">Delft Area, Netherlands</div>
+                        <p>At Delft Circuits, I spend my time analyzing and improving the production process of micro-strip and strip-line devices with regards to yield, turnover rate and human interaction.</p>
+                    </div>
+                    
+                    <div class="cv-position">
+                        <h3>Master's Thesis in Topological properties of Majorana Devices</h3>
+                        <div class="company">QuTech</div>
+                        <div class="date">September 2017 - May 2018 (9 months)</div>
+                        <div class="location">Delft Area, Netherlands</div>
+                        <p>Majorana qubits theoretically have exponential protection from external errors. This would mean that these are a candidate for fault-resistant quantum computation. In this thesis I design, fabricate and perform measurements on selective area growth InSb nanowires with epitaxial Al. We perform several measurements to extract parameters such as phase coherent length, mobility, electron density, g-factor, superconducting gap and critical magnetic field. These parameters need to meet certain requirements for this platform to be feasible for Majorana qubits.</p>
+                    </div>
+                    
+                    <div class="cv-position">
+                        <h3>Student Teaching Assistant</h3>
+                        <div class="company">TU Delft</div>
+                        <div class="date">September 2015 - April 2018 (2 years 8 months)</div>
+                        <p>I was responsible of assisting students with their experiments in their first year. Leading the group and grading their papers were my primary responsibilities.</p>
+                    </div>
+                    
+                    <div class="cv-position">
+                        <h3>Head of international Affairs</h3>
+                        <div class="company">Damen Raceroei Regatta</div>
+                        <div class="date">February 2015 - June 2017 (2 years 5 months)</div>
+                        <p>My functions included reaching out to rowing associations outside of the Netherlands, international recruitment and promotion.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cv-section">
+            <h2>Education</h2>
+            <div class="cv-position">
+                <h3>Master's Degree, Engineering Physics/Applied Physics</h3>
+                <div class="company">Delft University of Technology</div>
+                <div class="date">2016 - 2018</div>
+            </div>
+            
+            <div class="cv-position">
+                <h3>Master of Business Administration - MBA, Business Administration and Management, General</h3>
+                <div class="company">Quantic School of Business and Technology</div>
+                <div class="date">2019 - 2020</div>
+            </div>
+            
+            <div class="cv-position">
+                <h3>Bachelor of Applied Science (B.A.Sc.), Engineering Physics/Applied Physics</h3>
+                <div class="company">Delft University of Technology</div>
+                <div class="date">2013 - 2016</div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
