@@ -428,6 +428,10 @@ summary {
     border-color: var(--accent);
 }
 
+header {
+    text-align: center; /* Add this line to center header content */
+}
+
 @media (max-width: 768px) {
     .art-grid {
         grid-template-columns: 1fr;
